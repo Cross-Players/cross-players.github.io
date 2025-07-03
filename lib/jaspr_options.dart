@@ -28,7 +28,7 @@ import 'package:cross_website/components/home_page/list_logo.dart' as prefix11;
 import 'package:cross_website/components/header.dart' as prefix12;
 import 'package:cross_website/constants/app_colors.dart' as prefix13;
 import 'package:cross_website/constants/theme_toogle.dart' as prefix14;
-import 'package:cross_website/pages/about.dart' as prefix15;
+import 'package:cross_website/pages/about_new.dart' as prefix15;
 import 'package:cross_website/pages/home.dart' as prefix16;
 import 'package:cross_website/pages/not_found_page.dart' as prefix17;
 import 'package:cross_website/app.dart' as prefix18;
@@ -57,7 +57,7 @@ JasprOptions get defaultJasprOptions => JasprOptions(
       'components/home_page/contact_us_block',
     ),
 
-    prefix15.About: ClientTarget<prefix15.About>('pages/about'),
+    prefix15.AboutNew: ClientTarget<prefix15.AboutNew>('pages/about_new'),
 
     prefix16.Home: ClientTarget<prefix16.Home>('pages/home'),
   },
@@ -77,7 +77,8 @@ JasprOptions get defaultJasprOptions => JasprOptions(
     ...prefix12.HeaderState.styles,
     ...prefix13.root,
     ...prefix14.ThemeToggleState.styles,
-    ...prefix15.About.styles,
+
+    ...prefix15.AboutNew.styles,
     ...prefix17.NotFoundPage.styles,
 
     ...prefix18.AppState.styles,

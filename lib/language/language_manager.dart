@@ -65,9 +65,18 @@ class LanguageManager {
     }
     try {
       final expires = DateTime.now().add(Duration(days: 365)).toUtc();
+      // Lấy path hiện tại, nếu là "/" thì vẫn dùng "/"
+      final path = web.window.location.pathname.isNotEmpty
+          ? web.window.location.pathname
+          : '/';
+      // Xóa cookie cũ ở path / nếu có (để tránh xung đột)
+      web.document.cookie =
+          '$_languageKey=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
       final cookie =
-          '$_languageKey=$langCode; expires=${expires.toIso8601String()}; path=/';
+          '$_languageKey=$langCode; expires=${expires.toIso8601String()}; path=$path';
       web.document.cookie = cookie;
+      // Cập nhật provider để trigger re-render khi đổi ngôn ngữ
+      context.read(selectedLanguageProvider.notifier).state = langCode;
     } catch (e) {
       print('Error saving language to cookie: $e');
     }

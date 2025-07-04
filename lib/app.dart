@@ -1,4 +1,3 @@
-import 'package:cross_website/components/cookie_consent_banner.dart';
 import 'package:cross_website/components/header.dart';
 import 'package:cross_website/constants/app_colors.dart';
 import 'package:cross_website/language/language_manager.dart';
@@ -64,7 +63,7 @@ class AppState extends State<App> {
     } else {
       yield ProviderScope(
         child: div(classes: 'main', [
-          CookieConsentBanner(),
+          // CookieConsentBanner(),
           Router(
             routes: [
               Route(

@@ -159,10 +159,10 @@ class HeaderState extends State<Header> {
                 'change': (dynamic event) {
                   final value = event.target.value as String?;
                   if (value != null) {
-                    LanguageManager.saveLanguage(value, context);
                     context
                         .read(LanguageManager.selectedLanguageProvider.notifier)
                         .state = value;
+                    LanguageManager.saveLanguage(value);
                   }
                 },
               },

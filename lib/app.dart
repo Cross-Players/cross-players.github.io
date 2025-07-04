@@ -63,39 +63,7 @@ class AppState extends State<App> {
       yield div(classes: 'main', [text('Error loading translations')]);
     } else {
       yield ProviderScope(
-        child: div(classes: 'main', [
-          CookieConsentBanner(),
-          Router(
-            routes: [
-              Route(
-                path: '/',
-                title: 'Home',
-                builder: (context, state) => div(classes: 'main', [
-                  // Header(),
-                  const Home(),
-                ]),
-              ),
-              Route(
-                path: '/about',
-                title: 'About',
-                builder: (context, state) => div(classes: 'main', [
-                  Header(),
-                  const AboutNew(),
-                ]),
-              ),
-              Route(
-                path: '/:path',
-                builder: (context, state) {
-                  final currentPath = state.path;
-                  if (currentPath != '/' && currentPath != '/about') {
-                    return const NotFoundPage();
-                  }
-                  return div([]);
-                },
-              ),
-            ],
-          ),
-        ]),
+        child: MainAppContent(),
       );
     }
   }
@@ -118,4 +86,45 @@ class AppState extends State<App> {
           ),
         ]),
       ];
+}
+
+// Widget con để gọi initLanguage sau ProviderScope
+class MainAppContent extends StatelessComponent {
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    LanguageManager.initLanguage(context);
+    yield div(classes: 'main', [
+      CookieConsentBanner(),
+      Router(
+        routes: [
+          Route(
+            path: '/',
+            title: 'Home',
+            builder: (context, state) => div(classes: 'main', [
+              // Header(),
+              const Home(),
+            ]),
+          ),
+          Route(
+            path: '/about',
+            title: 'About',
+            builder: (context, state) => div(classes: 'main', [
+              Header(),
+              const AboutNew(),
+            ]),
+          ),
+          Route(
+            path: '/:path',
+            builder: (context, state) {
+              final currentPath = state.path;
+              if (currentPath != '/' && currentPath != '/about') {
+                return const NotFoundPage();
+              }
+              return div([]);
+            },
+          ),
+        ],
+      ),
+    ]);
+  }
 }

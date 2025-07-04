@@ -156,25 +156,24 @@ class LanguageManager {
     return false;
   }
 
-  static final selectedLanguageProvider = StateProvider<String>((ref) {
-    final hasConsent = ref.watch(cookieConsentProvider);
-    if (hasConsent == null) {
-      print('No cookie consent decision, defaulting to English');
-      return 'en';
+  // Lưu state ngôn ngữ hiện tại, không tự động đọc lại cookie mỗi lần build
+  static final selectedLanguageProvider = StateProvider<String>((ref) => 'en');
+
+  // Hàm khởi tạo ngôn ngữ từ cookie hoặc browser, chỉ gọi 1 lần khi app start
+  static void initLanguage(BuildContext context) {
+    final hasConsent = hasCookieConsent;
+    String lang = 'en';
+    if (hasConsent) {
+      final storedLang = getStoredLanguage();
+      if (storedLang != null && languages.containsKey(storedLang)) {
+        lang = storedLang;
+      } else {
+        final clientLang = _getClientLanguage();
+        lang = languages.containsKey(clientLang) ? clientLang : 'en';
+      }
     }
-    if (!hasConsent) {
-      print('Cookie consent declined, defaulting to English');
-      return 'en';
-    }
-    final storedLang = getStoredLanguage();
-    if (storedLang != null && languages.containsKey(storedLang)) {
-      print('Using stored language: $storedLang');
-      return storedLang;
-    }
-    final clientLang = _getClientLanguage();
-    print('Using client language: $clientLang');
-    return languages.containsKey(clientLang) ? clientLang : 'en';
-  });
+    context.read(selectedLanguageProvider.notifier).state = lang;
+  }
 
   static final languages = {
     'en': 'English',
@@ -312,3 +311,6 @@ class LanguageManager {
     return translations[key]?[langCode] ?? 'unknown';
   }
 }
+
+// Widget con để gọi initLanguage sau khi ProviderScope đã được khởi tạo
+// ĐÃ CHUYỂN sang app.dart, KHÔNG để ở language_manager.dart nữa!

@@ -65,18 +65,25 @@ class LanguageManager {
     }
     try {
       final expires = DateTime.now().add(Duration(days: 365)).toUtc();
-      // Luôn set path là '/cross-players.github.io/' cho cookie trên GitHub Pages
-      const basePath = '/cross-players.github.io/';
-      // Xóa cookie cũ ở path / và path basePath
+      const basePath1 = '/cross-players.github.io/';
+      const basePath2 = '/cross-players.github.io';
+      // Xóa cookie cũ ở mọi path có thể
       web.document.cookie =
           '$_languageKey=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
       web.document.cookie =
           '$_languageKey=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=' +
-              basePath;
-      final cookie =
-          '$_languageKey=$langCode; expires=${expires.toIso8601String()}; path=$basePath';
-      web.document.cookie = cookie;
-      // Cập nhật provider để trigger re-render khi đổi ngôn ngữ
+              basePath1;
+      web.document.cookie =
+          '$_languageKey=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=' +
+              basePath2;
+      // Set cookie ở cả 2 path
+      final cookie1 =
+          '$_languageKey=$langCode; expires=${expires.toIso8601String()}; path=$basePath1';
+      final cookie2 =
+          '$_languageKey=$langCode; expires=${expires.toIso8601String()}; path=$basePath2';
+      web.document.cookie = cookie1;
+      web.document.cookie = cookie2;
+      print('All cookies after set: ' + web.document.cookie);
       context.read(selectedLanguageProvider.notifier).state = langCode;
     } catch (e) {
       print('Error saving language to cookie: $e');

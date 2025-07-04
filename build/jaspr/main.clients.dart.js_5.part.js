@@ -358,22 +358,22 @@ vP(d){return d.c?A.bz(d).getUTCHours()+0:A.bz(d).getHours()+0},
 vR(d){return d.c?A.bz(d).getUTCMinutes()+0:A.bz(d).getMinutes()+0},
 vT(d){return d.c?A.bz(d).getUTCSeconds()+0:A.bz(d).getSeconds()+0},
 vQ(d){return d.c?A.bz(d).getUTCMilliseconds()+0:A.bz(d).getMilliseconds()+0},
-vC(d,e){var w,v,u,t,s,r,q=$.ts()
-if(!q){C.aH("Skipping saveLanguage due to no cookie consent")
+vC(d,e){var w,v,u,t,s,r=$.ts()
+if(!r){C.aH("Skipping saveLanguage due to no cookie consent")
 return}try{w=new A.aK(Date.now(),0,!1).fH(C.fr(365,0,0,0).a).fb()
-q=self
-s=x.m
-v=C.p(s.a(s.a(q.window).location).pathname).length!==0?C.p(s.a(s.a(q.window).location).pathname):"/"
-s.a(q.document).cookie="lang=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/"
-u="lang="+d+"; expires="+w.cB()+"; path="+C.n(v)
-s.a(q.document).cookie=u
-q=$.bb().gbH()
-q=B.eD(e,!1).gA().w.ix(q,x.u)
-q.bw(q.$ti.c.a(d))}catch(r){t=C.y(r)
-C.aH("Error saving language to cookie: "+C.n(t))}},
+r=self
+t=x.m
+t.a(r.document).cookie="lang=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/"
+t.a(r.document).cookie="lang=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/cross-players.github.io/"
+v="lang="+d+"; expires="+w.cB()+"; path=/cross-players.github.io/"
+t.a(r.document).cookie=v
+r=$.bb().gbH()
+r=B.eD(e,!1).gA().w.ix(r,x.u)
+r.bw(r.$ti.c.a(d))}catch(s){u=C.y(s)
+C.aH("Error saving language to cookie: "+C.n(u))}},
 zW(d){var w,v,u=x.N,t=C.x(u,u)
 for(u=x.z,w=0;w<C.av(d.length);++w){v=u.a(d.item(w))
-t.i(0,C.p(v.name),C.p(v.value))}return t},
+t.i(0,C.r(v.name),C.r(v.value))}return t},
 xB(d,e){var w=null
 return new B.a9("span",w,w,e,w,w,w,d,w)},
 xA(d){return F.a.eY(F.d.iI(C.cy(d)&1048575,16),5,"0")},
@@ -462,7 +462,7 @@ q=r!=null
 p=q?"images/close-svgrepo-com.svg":"images/menu-svgrepo-com.svg"
 o=x.i
 u=2
-return e.b=H.ie(C.a([B.aw(null,null,null,null,p,B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",40),null,null,null,null,null,null,null,null,null,null,null,new B.m("px",40),null),null)],o),n,"menu-toggle",null,w.c,null),1
+return e.b=H.ie(C.a([B.aw(null,null,null,null,p,B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",40),null,null,null,null,null,null,null,null,null,null,null,new B.m("px",40),null),null)],o),n,"menu-toggle",null,w.c,null),1
 case 2:u=q?3:4
 break
 case 3:u=5
@@ -490,7 +490,7 @@ aS(){var w=this.f
 if(w!=null)w.bi()
 this.dH()},
 nB(){var w=$.yC(),v=self,u=x.m
-w.bj("page_visit",C.a0(["path",C.p(u.a(u.a(v.window).location).pathname)],x.N,x.A))
+w.bj("page_visit",C.a0(["path",C.r(u.a(u.a(v.window).location).pathname)],x.N,x.A))
 this.f=C.qa(x.z.a(u.a(v.window)),"resize",x.w.a(new A.na(this)),!1,u)},
 t(d){return new C.L(this.mf(d),x.d)},
 mf(d){var w=this
@@ -509,11 +509,11 @@ k=C.a([],q)
 j=l.b
 i=l.a
 if(j==="/about")k.push(new A.jx(j,C.a([new B.t(i,null)],q),null))
-else k.push(new B.a9("div",null,null,B.q(null,null,null,null,null,G.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,E.Z,null,null),null,C.a0(["click",new A.n5(r,l)],g,n),null,C.a([new B.t(i,null)],q),null))
+else k.push(new B.a9("div",null,null,B.p(null,null,null,null,null,G.E,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,E.Z,null,null),null,C.a0(["click",new A.n5(r,l)],g,n),null,C.a([new B.t(i,null)],q),null))
 p.push(new B.a9("div",null,"nav-item",null,null,null,null,k,null))}p.push(new A.eh(new A.n6(),null))
 p.push(B.j(C.a([new A.eM(null)],q),"theme_toggle",null,null,null))
 h=new A.j6(null,C.a([new B.a9("nav",null,"nav-menu",null,null,null,null,p,null)],q),w.d)
-g=C.a([I.cQ(C.a([B.aw(null,null,null,null,"images/x_cross.png",B.q(null,null,null,null,E.j,null,null,null,null,null,null,null,null,new B.m("px",120),null,new B.e6(new B.ak("%",5),null,null,null),null,null,new B.bD(new B.hP("rem",0.7)),null,new B.aW(new B.m("px",8)),null,null,null,null,new B.m("px",120),null),null)],q),null,null,null,"/",null,null,null)],q)
+g=C.a([I.cQ(C.a([B.aw(null,null,null,null,"images/x_cross.png",B.p(null,null,null,null,E.j,null,null,null,null,null,null,null,null,new B.m("px",120),null,new B.e6(new B.ak("%",5),null,null,null),null,null,new B.bD(new B.hP("rem",0.7)),null,new B.aW(new B.m("px",8)),null,null,null,null,new B.m("px",120),null),null)],q),null,null,null,"/",null,null,null)],q)
 if(!w.e)g.push(h)
 q=w.e?h:null
 g.push(new A.jA(new A.n7(w),q,null))
@@ -530,15 +530,15 @@ return function(){var v=d
 var u=0,t=1,s=[],r,q,p,o,n
 return function $async$t(e,f,g){if(f===1){s.push(g)
 u=t}while(true)switch(u){case 0:n=w.d?D.m:D.h
-n=B.q(null,null,n,new H.cl(G.f,new B.m("px",1)),null,null,D.e,null,G.q,null,null,null,null,null,null,new H.aO(null,new B.ak("%",5)),null,null,new H.aO(new B.m("px",40),new B.ak("%",5)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,G.f),null,null,null,null)
-r=B.q(D.r,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+n=B.p(null,null,n,new H.cl(G.f,new B.m("px",1)),null,null,D.e,null,G.q,null,null,null,null,null,null,new H.aO(null,new B.ak("%",5)),null,null,new H.aO(new B.m("px",40),new B.ak("%",5)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,G.f),null,null,null,null)
+r=B.p(D.r,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 q=x.i
 p=B.j(C.a([new B.t(w.a.c,null)],q),"card_process_index",null,null,null)
 o=B.j(C.a([new B.t(w.a.d,null)],q),"card_process_title",null,null,null)
 r=C.a([B.j(C.a([p,new B.Z(null,25,null),o,B.j(C.a([new B.t(w.d?"-":"+",null)],q),"icon-show-more",null,null,null)],q),null,null,null,r)],q)
-if(w.d){p=B.q(null,null,G.f,null,null,null,null,null,null,null,null,null,null,new B.m("px",1),null,new H.aO(new B.m("px",30),null),null,null,null,null,null,null,null,null,null,null,null)
+if(w.d){p=B.p(null,null,G.f,null,null,null,null,null,null,null,null,null,null,new B.m("px",1),null,new H.aO(new B.m("px",30),null),null,null,null,null,null,null,null,null,null,null,null)
 p=B.j(C.a([],q),null,null,null,p)
-o=B.q(null,null,null,null,G.f,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+o=B.p(null,null,null,null,G.f,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 r.push(B.j(C.a([p,B.j(C.a([new B.t(w.a.e,null)],q),null,null,null,o)],q),"process_content",null,null,null))}u=2
 return e.b=H.ie(r,null,null,null,new A.lQ(w),n),1
 case 2:return 0
@@ -562,12 +562,12 @@ m8(d){return function(){var w=d
 var v=0,u=1,t=[],s,r,q,p
 return function $async$t(e,f,g){if(f===1){t.push(g)
 v=u}while(true)switch(v){case 0:r=B.bA(w,$.bb(),x.N)
-q=B.q(null,null,null,null,E.j,null,null,null,null,null,new B.m("px",30),D.B,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+q=B.p(null,null,null,null,E.j,null,null,null,null,null,new B.m("px",30),D.B,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 p=x.i
 q=B.j(C.a([new B.t(B.l("cta_title",r),null)],p),null,null,null,q)
-s=B.q(null,null,null,null,E.j,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+s=B.p(null,null,null,null,E.j,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 v=2
-return e.b=B.j(C.a([B.j(C.a([B.j(C.a([q,new B.Z(20,null,null),B.j(C.a([new B.t(B.l("cta_description",r),null)],p),null,null,null,s),new B.Z(20,null,null),new A.ei(B.l("cta_button_text",r),new A.ms(),null)],p),"cta_text",null,null,null),B.j(C.a([B.aw(null,null,null,null,"images/intheoffice_image.svg",B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",50),null),null)],p),"cta_image",null,null,null)],p),"cta_block",null,null,null)],p),"cta_overall",null,null,null),1
+return e.b=B.j(C.a([B.j(C.a([B.j(C.a([q,new B.Z(20,null,null),B.j(C.a([new B.t(B.l("cta_description",r),null)],p),null,null,null,s),new B.Z(20,null,null),new A.ei(B.l("cta_button_text",r),new A.ms(),null)],p),"cta_text",null,null,null),B.j(C.a([B.aw(null,null,null,null,"images/intheoffice_image.svg",B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",50),null),null)],p),"cta_image",null,null,null)],p),"cta_block",null,null,null)],p),"cta_overall",null,null,null),1
 case 2:return 0
 case 1:return e.c=t.at(-1),3}}}}}
 A.ja.prototype={
@@ -577,8 +577,8 @@ var v=0,u=2,t=[],s,r,q,p,o,n,m,l,k,j
 return function $async$t(e,f,g){if(f===1){t.push(g)
 v=u}while(true)$async$outer:switch(v){case 0:o=B.bA(w,$.bb(),x.N)
 n=[new A.cx(B.l("team_member1_name",o),B.l("team_member1_position",o),B.l("team_member1_content",o),"images/NguyenQuyenAnh.png","Nguy\u1ec5n Quy\u1ec1n Anh","https://boxingnguyen.github.io/",null),new A.cx(B.l("team_member2_name",o),B.l("team_member2_position",o),B.l("team_member2_content",o),"images/viettran.png","Tr\u1ea7n Vi\u1ec7t",null,null),new A.cx(B.l("team_member3_name",o),B.l("team_member3_position",o),B.l("team_member3_content",o),"images/Ph\xf9ng Quang Huy.JPG","Ph\xf9ng Quang Huy",null,null),new A.cx(B.l("team_member4_name",o),B.l("team_member4_position",o),B.l("team_member4_content",o),"images/B\xf9i B\u1ea3o Phong.JPG","B\xf9i B\u1ea3o Phong",null,null),new A.cx(B.l("team_member5_name",o),B.l("team_member5_position",o),B.l("team_member5_content",o),"images/dangtung.png","Nguy\u1ec5n \u0110\u0103ng T\xf9ng",null,null),new A.cx(B.l("team_member6_name",o),B.l("team_member6_position",o),B.l("team_member6_content",o),"images/member_team.png","Nguy\u1ec5n V\u0103n A",null,null)]
-m=B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
-l=B.q(null,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,new H.aO(null,new B.ak("%",5)),null,null,null,null,null,null,null,null,null,null,null)
+m=B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
+l=B.p(null,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,new H.aO(null,new B.ak("%",5)),null,null,null,null,null,null,null,null,null,null,null)
 k=x.i
 j=C.a([],k)
 for(s=0;s<2;++s){r=s*3
@@ -592,7 +592,7 @@ break $async$outer}p=n[p]
 r+=2
 if(!(r<6)){C.d(n,r)
 v=1
-break $async$outer}j.push(new I.el(C.a([q,p,n[r]],k),null))}r=B.q(E.ak,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null)
+break $async$outer}j.push(new I.el(C.a([q,p,n[r]],k),null))}r=B.p(E.ak,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null)
 j.push(B.j(C.a([new A.ei(B.l("team_see_all_team",o),null,null)],k),null,null,null,r))
 v=3
 return e.b=B.j(C.a([B.j(j,null,null,null,l)],k),null,null,null,m),1
@@ -615,7 +615,7 @@ mh(d){var w=this
 return function(){var v=d
 var u=0,t=1,s=[],r,q,p,o,n,m,l,k,j,i
 return function $async$t(e,f,g){if(f===1){s.push(g)
-u=t}while(true)switch(u){case 0:p=B.q(null,null,w.c,new H.cl(G.f,new B.m("px",1)),null,null,D.e,null,D.t,null,null,null,null,null,G.C,null,null,null,new B.bD(new B.m("px",50)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,G.f),null,null,new B.ak("%",100),null)
+u=t}while(true)switch(u){case 0:p=B.p(null,null,w.c,new H.cl(G.f,new B.m("px",1)),null,null,D.e,null,D.t,null,null,null,null,null,G.C,null,null,null,new B.bD(new B.m("px",50)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,G.f),null,null,new B.ak("%",100),null)
 o=x.i
 n=C.a([],o)
 m=w.x.split(" ")
@@ -624,11 +624,11 @@ k=w.d
 j=w.e
 i=0
 for(;i<l;++i){r=m[i]
-q=B.q(null,null,k,null,j,null,null,null,null,null,new B.m("px",30),D.B,null,null,null,null,null,null,new H.aO(new B.m("px",4),new B.m("px",6)),null,new B.aW(new B.m("px",4)),null,null,null,null,null,null)
+q=B.p(null,null,k,null,j,null,null,null,null,null,new B.m("px",30),D.B,null,null,null,null,null,null,new H.aO(new B.m("px",4),new B.m("px",6)),null,new B.aW(new B.m("px",4)),null,null,null,null,null,null)
 n.push(A.xB(C.a([new B.t(r,null)],o),q))}n=B.j(n,"service_word",null,null,null)
-m=B.q(D.r,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",230),null)
-l=B.aw(null,null,20,null,"images/arrow_up_right.svg",B.q(null,null,D.h,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.bD(new B.m("px",10)),null,new B.aW(new B.m("px",20)),null,null,null,null,null,null),20)
-k=B.q(null,null,null,null,w.f,null,null,null,null,null,new B.m("px",20),D.o,null,null,null,null,null,null,null,null,null,null,null,E.N,null,null,null)
+m=B.p(D.r,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",230),null)
+l=B.aw(null,null,20,null,"images/arrow_up_right.svg",B.p(null,null,D.h,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,new B.bD(new B.m("px",10)),null,new B.aW(new B.m("px",20)),null,null,null,null,null,null),20)
+k=B.p(null,null,null,null,w.f,null,null,null,null,null,new B.m("px",20),D.o,null,null,null,null,null,null,null,null,null,null,null,E.N,null,null,null)
 n=B.j(C.a([n,new B.Z(20,null,null),B.j(C.a([l,new B.Z(null,15,null),B.j(C.a([new B.t(w.y,null)],o),null,null,null,k)],o),null,null,null,m)],o),"service_content",null,null,null)
 m=B.aw(null,"service_image",200,null,w.Q,null,200)
 u=2
@@ -653,24 +653,24 @@ var u=0,t=1,s=[],r,q,p,o
 return function $async$t(e,f,g){if(f===1){s.push(g)
 u=t}while(true)switch(u){case 0:p=w.w
 o=x.i
-if(p!=null){r=B.q(null,null,null,null,E.j,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,E.Z,null,null)
-q=B.q(null,null,E.V,new H.cl(E.j,new B.m("px",1)),null,null,null,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",40),new B.m("px",35)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,E.j),null,null,null,null)
+if(p!=null){r=B.p(null,null,null,null,E.j,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,E.Z,null,null)
+q=B.p(null,null,E.V,new H.cl(E.j,new B.m("px",1)),null,null,null,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",40),new B.m("px",35)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,E.j),null,null,null,null)
 r=I.cQ(C.a([B.j(C.a([w.hd(),w.h7(),w.fS()],o),null,null,null,q)],o),null,null,null,p,null,r,K.M)
-p=r}else{p=B.q(null,null,E.V,new H.cl(E.j,new B.m("px",1)),null,null,null,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",40),new B.m("px",35)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,E.j),null,null,null,null)
+p=r}else{p=B.p(null,null,E.V,new H.cl(E.j,new B.m("px",1)),null,null,null,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",40),new B.m("px",35)),null,new B.aW(new B.m("px",45)),null,new A.da(new B.m("px",0),new B.m("px",5),null,E.j),null,null,null,null)
 p=B.j(C.a([w.hd(),w.h7(),w.fS()],o),null,null,null,p)}u=2
 return e.b=p,1
 case 2:return 0
 case 1:return e.c=s.at(-1),3}}}},
-hd(){var w,v,u,t=this,s=null,r="px",q=B.q(s,s,s,s,s,s,D.e,s,D.t,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),p=x.i,o=B.j(C.a([B.aw(t.r,s,130,s,t.f,B.q(s,s,s,new H.cl(D.m,new B.m(r,2)),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new B.aW(new B.m(r,20)),s,s,s,s,s,s),130)],p),s,s,s,s),n=B.q(E.al,s,s,s,s,s,D.e,s,G.q,s,s,s,s,s,G.C,s,s,s,s,s,s,s,s,s,s,new B.ak("%",100),s),m=B.q(s,E.am,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s)
+hd(){var w,v,u,t=this,s=null,r="px",q=B.p(s,s,s,s,s,s,D.e,s,D.t,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),p=x.i,o=B.j(C.a([B.aw(t.r,s,130,s,t.f,B.p(s,s,s,new H.cl(D.m,new B.m(r,2)),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new B.aW(new B.m(r,20)),s,s,s,s,s,s),130)],p),s,s,s,s),n=B.p(E.al,s,s,s,s,s,D.e,s,G.q,s,s,s,s,s,G.C,s,s,s,s,s,s,s,s,s,s,new B.ak("%",100),s),m=B.p(s,E.am,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s)
 m=B.j(C.a([B.aw("Cross Logo",s,50,s,"images/x_cross.png",s,50)],p),s,s,s,m)
-w=B.q(s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new B.ak("%",100),s)
-v=B.q(s,s,s,s,E.j,s,s,s,s,s,new B.m(r,20),D.B,s,s,s,s,s,s,s,s,s,s,s,E.N,s,new B.ak("%",100),s)
+w=B.p(s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new B.ak("%",100),s)
+v=B.p(s,s,s,s,E.j,s,s,s,s,s,new B.m(r,20),D.B,s,s,s,s,s,s,s,s,s,s,s,E.N,s,new B.ak("%",100),s)
 v=B.j(C.a([new B.t(t.c,s)],p),s,s,s,v)
-u=B.q(s,s,s,s,E.j,s,s,s,s,s,new B.m(r,18),D.o,s,s,s,s,s,s,s,s,s,s,s,E.N,s,s,s)
+u=B.p(s,s,s,s,E.j,s,s,s,s,s,new B.m(r,18),D.o,s,s,s,s,s,s,s,s,s,s,s,E.N,s,s,s)
 return B.j(C.a([o,new B.Z(s,20,s),B.j(C.a([m,B.j(C.a([v,B.j(C.a([new B.t(t.d,s)],p),s,s,s,u)],p),s,s,s,w)],p),s,s,s,n)],p),s,s,s,q)},
-h7(){var w=null,v=B.q(w,w,E.j,w,w,w,w,w,w,w,w,w,w,new B.m("px",1),w,new H.aO(new B.m("px",28),w),w,w,w,w,w,w,w,w,w,w,w)
+h7(){var w=null,v=B.p(w,w,E.j,w,w,w,w,w,w,w,w,w,w,new B.m("px",1),w,new H.aO(new B.m("px",28),w),w,w,w,w,w,w,w,w,w,w,w)
 return B.j(C.a([],x.i),w,w,w,v)},
-fS(){var w=null,v=B.q(w,w,w,w,E.j,w,w,w,w,w,new B.m("px",18),D.o,w,w,w,w,w,w,w,w,w,w,w,E.N,w,w,w)
+fS(){var w=null,v=B.p(w,w,w,w,E.j,w,w,w,w,w,new B.m("px",18),D.o,w,w,w,w,w,w,w,w,w,w,w,E.N,w,w,w)
 return B.j(C.a([new B.t(this.e,w)],x.i),w,w,w,v)}}
 A.jG.prototype={
 t(d){return new C.L(this.mn(d),x.d)},
@@ -686,10 +686,10 @@ r=B.l("our_service_smm_title",l)
 r=A.nA(G.f,D.h,D.h,B.l("our_service_smm_content",l),D.h,"images/employee_supply_image.svg",D.m,r,G.f)
 q=B.l("our_service_email_title",l)
 p=[k,s,r,A.nA(new B.bm("#F3F3F3"),G.f,D.m,B.l("our_service_email_content",l),G.f,"images/programing_image.svg",D.m,q,G.f)]
-q=B.q(D.r,E.P,null,null,null,null,D.e,null,G.q,null,null,null,null,null,K.H,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
+q=B.p(D.r,E.P,null,null,null,null,D.e,null,G.q,null,null,null,null,null,K.H,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
 r=x.i
 s=C.a([],r)
-for(o=0;o<2;++o){k=B.q(D.r,E.P,null,null,null,null,D.e,null,null,null,null,null,null,null,K.H,null,new B.ak("%",100),null,new H.aO(null,new B.ak("%",10)),null,null,null,null,null,null,null,null)
+for(o=0;o<2;++o){k=B.p(D.r,E.P,null,null,null,null,D.e,null,null,null,null,null,null,null,K.H,null,new B.ak("%",100),null,new H.aO(null,new B.ak("%",10)),null,null,null,null,null,null,null,null)
 n=o*2
 if(!(n<4)){C.d(p,n)
 v=1
@@ -707,8 +707,8 @@ var v=0,u=1,t=[],s,r,q,p
 return function $async$t(e,f,g){if(f===1){t.push(g)
 v=u}while(true)switch(v){case 0:H.aP("the deo nao")
 s=B.bA(w,$.bb(),x.N)
-r=B.q(D.r,E.P,null,null,null,null,null,null,null,null,null,null,null,null,K.H,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
-q=B.q(null,null,null,null,null,null,D.e,null,G.q,null,null,null,new A.mY(new B.m("px",30)),null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null)
+r=B.p(D.r,E.P,null,null,null,null,null,null,null,null,null,null,null,null,K.H,null,new B.ak("%",100),null,null,null,null,null,null,null,null,null,null)
+q=B.p(null,null,null,null,null,null,D.e,null,G.q,null,null,null,new A.mY(new B.m("px",30)),null,null,null,null,null,null,null,null,null,null,null,null,new B.ak("%",100),null)
 p=x.i
 v=2
 return e.b=B.j(C.a([B.j(C.a([new A.bs("01",B.l("process_consultation_title",s),B.l("process_consultation_content",s),null),new A.bs("02",B.l("process_research_title",s),B.l("process_research_content",s),null),new A.bs("03",B.l("process_implementation_title",s),B.l("process_implementation_content",s),null),new A.bs("04",B.l("process_monitoring_title",s),B.l("process_monitoring_content",s),null),new A.bs("05",B.l("process_reporting_title",s),B.l("process_reporting_content",s),null),new A.bs("06",B.l("process_improvement_title",s),B.l("process_improvement_content",s),null),new A.bs("07",B.l("step7_label",s),B.l("step7_content",s),null),new A.bs("08",B.l("step8_label",s),B.l("step8_content",s),null)],p),null,null,null,q)],p),null,null,null,r),1
@@ -718,7 +718,7 @@ A.eM.prototype={
 aQ(){return new A.kg()}}
 A.kg.prototype={
 aA(){this.bb()
-this.d=C.p(x.z.a(x.m.a(self.document).documentElement).className)==="dark"},
+this.d=C.r(x.z.a(x.m.a(self.document).documentElement).className)==="dark"},
 t(d){return new C.L(this.mt(d),x.d)},
 mt(d){var w=this
 return function(){var v=d
@@ -729,7 +729,7 @@ q=x.N
 u=2
 return e.b=new A.ef(E.aq,C.a0(["class",r],q,q),null,null,null),1
 case 2:q=C.a0(["aria-label","Theme Toggle"],q,q)
-r=B.q(null,null,null,null,null,null,null,null,null,null,new B.m("px",30),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+r=B.p(null,null,null,null,null,null,null,null,null,null,new B.m("px",30),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 u=3
 return e.b=H.ie(C.a([B.aw(null,null,null,null,w.d?"images/moon.svg":"images/sun.svg",null,null)],x.i),q,"theme-toggle",null,new A.pu(w),r),1
 case 3:return 0
@@ -745,7 +745,7 @@ var v=0,u=1,t=[],s,r,q
 return function $async$t(e,f,g){if(f===1){t.push(g)
 v=u}while(true)switch(v){case 0:r=x.N
 q=B.bA(w,$.bb(),r)
-r=B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,C.a0(["background","var(--gradientBackground)"],r,r),null,null,null,null,null)
+r=B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,C.a0(["background","var(--gradientBackground)"],r,r),null,null,null,null,null)
 s=x.i
 v=2
 return e.b=B.j(C.a([new A.dz(null),new A.jc(null),new A.jy(null),B.j(C.a([new A.d5(B.l("home_service_title",q),B.l("home_service_content",q),null),new A.jG(null)],s),null,null,"services",null),new A.iQ(null),B.j(C.a([new A.d5(B.l("home_case_studies_title",q),B.l("home_case_studies_content",q),null),new A.iI(null)],s),null,null,"case-studies",null),B.j(C.a([new A.d5(B.l("home_process_title",q),B.l("home_process_content",q),null),new A.jN(null)],s),null,null,"process",null),B.j(C.a([new A.d5(B.l("home_team_title",q),B.l("home_team_content",q),null),new A.ja(null)],s),null,null,"careers",null),B.j(C.a([new A.d5(B.l("home_contact_us_title",q),B.l("home_contact_us_content",q),null),new H.ds(null)],s),null,null,"contact",null),new B.Z(140,null,null),new I.fx(null)],s),null,null,null,r),1
@@ -868,20 +868,20 @@ r.sjX(w)
 q=w}return q},
 cm(d){var w,v,u,t,s,r=null,q=d instanceof $.lm()
 if(!q)return r
-$label0$0:{w=C.p(d.id)
+$label0$0:{w=C.r(d.id)
 q=w
 if(typeof q=="string"){q=w.length!==0
 v=w}else{v=r
 q=!1}u=r
 if(q){q=v
-break $label0$0}t=C.p(d.tagName)
+break $label0$0}t=C.r(d.tagName)
 q=t
 if("TITLE"!==q)q="BASE"===t
 else q=!0
-if(q){q="__"+C.p(d.tagName)
+if(q){q="__"+C.r(d.tagName)
 break $label0$0}if("META"===t){q=x.m
 s=x.z.a(q.a(d.attributes).getNamedItem("name"))
-$label1$1:{if(q.b(s)){q="__meta:"+C.p(s.value)
+$label1$1:{if(q.b(s)){q="__meta:"+C.r(s.value)
 break $label1$1}q=u
 break $label1$1}break $label0$0}q=u
 break $label0$0}return q},
@@ -894,7 +894,7 @@ d.c!==$&&C.bG()
 d.sjW(u)
 v=u}for(t=d.f,s=t.length,r=0;r<t.length;t.length===s||(0,C.an)(t),++r){q=t[r].r
 if(q!=null)v.B(0,q)}p=C.ev(x.N)
-for(t=x.m,s=x.z,o=0;o<C.av(t.a(d.gaF().attributes).length);++o)p.m(0,C.p(s.a(t.a(d.gaF().attributes).item(o)).name))
+for(t=x.m,s=x.z,o=0;o<C.av(t.a(d.gaF().attributes).length);++o)p.m(0,C.r(s.a(t.a(d.gaF().attributes).item(o)).name))
 if(v.a!==0)for(t=new C.aE(v,C.f(v).h("aE<1,2>")).gv(0);t.n();){s=t.d
 s.toString
 n=s.a
@@ -1108,22 +1108,22 @@ var v=0,u=1,t=[],s,r,q,p,o,n,m,l,k,j,i,h,g,f
 return function $async$$1(e,a0,a1){if(a0===1){t.push(a1)
 v=u}while(true)switch(v){case 0:i=x.N
 h=B.bA(w,$.bb(),i)
-g=B.q(D.r,null,null,null,null,G.E,D.e,null,null,null,null,null,null,null,null,null,null,null,new H.aO(null,new B.m("px",8)),null,null,null,null,null,null,null,null)
+g=B.p(D.r,null,null,null,null,G.E,D.e,null,null,null,null,null,null,null,null,null,null,null,new H.aO(null,new B.m("px",8)),null,null,null,null,null,null,null,null)
 f=x.i
-g=B.j(C.a([B.aw(null,null,null,null,A.vv(h),B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",25),null,null,null,null,null,null,null,null,null,null,null,new B.m("px",35),null),null)],f),"custom-select-display",null,null,g)
-s=B.q(null,null,null,null,null,G.E,null,null,null,null,null,null,null,new B.m("px",30),null,null,null,0,null,new A.kV("absolute"),null,null,null,null,null,new B.m("px",50),new A.la("1"))
+g=B.j(C.a([B.aw(null,null,null,null,A.vv(h),B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",25),null,null,null,null,null,null,null,null,null,null,null,new B.m("px",35),null),null)],f),"custom-select-display",null,null,g)
+s=B.p(null,null,null,null,null,G.E,null,null,null,null,null,null,null,new B.m("px",30),null,null,null,0,null,new A.kV("absolute"),null,null,null,null,null,new B.m("px",50),new A.la("1"))
 r=x.v
 q=C.a0(["change",new A.n3(w)],i,r)
 p=C.a([],f)
 for(o=new C.aE($.nM,C.f($.nM).h("aE<1,2>")).gv(0);o.n();){n=o.d
 n.toString
-m=B.q(D.r,null,null,null,E.j,null,D.e,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",2),new B.m("px",1)),null,null,null,null,null,null,null,null)
+m=B.p(D.r,null,null,null,E.j,null,D.e,null,null,null,null,null,null,null,null,null,null,null,new H.aO(new B.m("px",2),new B.m("px",1)),null,null,null,null,null,null,null,null)
 l=C.x(i,i)
 k=n.a
 l.i(0,"value",k)
 if(J.J(k,h))l.i(0,"selected","")
-k=B.aw(null,null,null,null,A.vv(k),B.q(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",15),null,new B.e6(null,null,new B.m("px",12),null),null,null,null,null,null,null,null,null,null,new B.m("px",20),null),null)
-j=B.q(null,null,null,null,null,null,null,new A.kL(1),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+k=B.aw(null,null,null,null,A.vv(k),B.p(null,null,null,null,null,null,null,null,null,null,null,null,null,new B.m("px",15),null,new B.e6(null,null,new B.m("px",12),null),null,null,null,null,null,null,null,null,null,new B.m("px",20),null),null)
+j=B.p(null,null,null,null,null,null,null,new A.kL(1),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 j=C.a([k,A.xB(C.a([new B.t(n.b,null)],f),j)],f)
 n=C.x(i,i)
 n.B(0,l)
@@ -1165,12 +1165,12 @@ return function(){var v=d
 var u=0,t=1,s=[],r,q,p,o,n,m
 return function $async$$1(e,f,g){if(f===1){s.push(g)
 u=t}while(true)switch(u){case 0:p=B.bA(v,$.bb(),x.N)
-o=B.q(null,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-n=B.q(null,null,null,null,E.V,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+o=B.p(null,null,null,null,null,null,D.e,null,G.q,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+n=B.p(null,null,null,null,E.V,null,null,null,null,null,new B.m("px",18),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 m=x.i
 n=B.j(C.a([new B.t(w.a,null)],m),null,null,null,n)
-r=B.q(null,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-q=B.q(null,null,null,null,D.m,null,null,null,null,null,new B.m("px",20),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+r=B.p(null,null,null,null,null,null,D.e,null,D.t,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+q=B.p(null,null,null,null,D.m,null,null,null,null,null,new B.m("px",20),D.o,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 u=2
 return e.b=B.j(C.a([n,new B.Z(20,null,null),B.j(C.a([B.j(C.a([new B.t(B.l("case_studies_learn_more",p),null)],m),null,null,null,q),new B.Z(null,15,null),B.aw(null,null,25,null,"images/learn_more_blue_icon.svg",null,25)],m),null,null,null,r),new B.Z(20,null,null)],m),null,null,null,o),1
 case 2:return 0
@@ -1278,7 +1278,7 @@ v(A.fG,A.dy)})()
 C.f4(b.typeUniverse,JSON.parse('{"aK":{"ap":["aK"]},"ei":{"ac":[],"o":[]},"jA":{"ac":[],"o":[]},"d5":{"ac":[],"o":[]},"dz":{"aV":[],"o":[]},"jd":{"ab":["dz"],"ab.T":"dz"},"bs":{"aV":[],"o":[]},"iH":{"ab":["bs"],"ab.T":"bs"},"iI":{"ac":[],"o":[]},"iQ":{"ac":[],"o":[]},"ja":{"ac":[],"o":[]},"jc":{"ac":[],"o":[]},"jl":{"ac":[],"o":[]},"jy":{"ac":[],"o":[]},"cx":{"ac":[],"o":[]},"jG":{"ac":[],"o":[]},"jN":{"ac":[],"o":[]},"eM":{"aV":[],"o":[]},"kg":{"ab":["eM"],"ab.T":"eM"},"dA":{"aV":[],"o":[]},"jf":{"ab":["dA"],"ab.T":"dA"},"j6":{"aM":[],"o":[]},"eh":{"ac":[],"o":[]},"c7":{"bY":[],"eG":[]},"ef":{"aM":[],"o":[]},"kz":{"bM":[],"v":[],"a5":[]},"da":{"z0":[]},"kL":{"zl":[]},"hI":{"vL":[]},"kV":{"vL":[]},"la":{"kq":[]},"fG":{"dy":[],"dC":[]},"dy":{"dC":[]},"jx":{"ac":[],"o":[]},"dB":{"bu":[],"aM":[],"o":[]}}'))
 var y={c:"max must be in range 0 < max \u2264 2^32, was "}
 var x=(function rtii(){var w=C.a2
-return{U:w("ef"),j:w("c7"),k:w("aK"),h:w("v"),L:w("ay"),Y:w("bl"),r:w("dB"),B:w("u<c7>"),i:w("u<o>"),O:w("u<z>"),s:w("u<b>"),m:w("z"),a:w("k<b>"),b:w("r<b,z>"),f:w("r<b,b>"),P:w("r<b,@>"),_:w("+(z,z)"),q:w("bN"),u:w("bh<b>"),N:w("b"),Z:w("d7"),d:w("L<o>"),F:w("L<z>"),y:w("D"),A:w("@"),X:w("aK?"),z:w("z?"),n:w("r<b,b>?"),Q:w("i?"),T:w("b?"),w:w("~(z)?"),H:w("~"),v:w("~(z)")}})();(function constants(){E.ak=new B.fh("end",4,"end")
+return{U:w("ef"),j:w("c7"),k:w("aK"),h:w("v"),L:w("ay"),Y:w("bl"),r:w("dB"),B:w("u<c7>"),i:w("u<o>"),O:w("u<z>"),s:w("u<b>"),m:w("z"),a:w("k<b>"),b:w("q<b,z>"),f:w("q<b,b>"),P:w("q<b,@>"),_:w("+(z,z)"),q:w("bN"),u:w("bh<b>"),N:w("b"),Z:w("d7"),d:w("L<o>"),F:w("L<z>"),y:w("D"),A:w("@"),X:w("aK?"),z:w("z?"),n:w("q<b,b>?"),Q:w("i?"),T:w("b?"),w:w("~(z)?"),H:w("~"),v:w("~(z)")}})();(function constants(){E.ak=new B.fh("end",4,"end")
 E.al=new B.fh("start",3,"start")
 E.P=new A.ip("center",3,"center")
 E.am=new A.ip("end",5,"end")
@@ -1300,5 +1300,5 @@ return v})
 w($,"FH","yC",()=>new A.nV("YxfQMMWOWRcKpumc",!1,new A.rF(),new A.rG()))
 w($,"Fu","yq",()=>A.Ah())})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.clients.dart.js_5",e:"endPart",h:b})})($__dart_deferred_initializers__,"euCzoVH8Y+rqrAs6eG8cFYyJV74=");
+a.eventLog.push({p:"main.clients.dart.js_5",e:"endPart",h:b})})($__dart_deferred_initializers__,"zVHsnXXaK0otihPJepQ8w+C9wO0=");
 //# sourceMappingURL=main.clients.dart.js_5.part.js.map

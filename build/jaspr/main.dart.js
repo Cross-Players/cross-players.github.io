@@ -3604,21 +3604,21 @@ if(J.rU(s,"ko"))return"ko"
 return"en"}catch(p){r=A.y(p)
 A.aD("Error detecting client language: "+A.m(r))
 return"en"}},
-uU(a,b){var s,r,q,p,o,n,m=$.rO()
-if(!m){A.aD("Skipping saveLanguage due to no cookie consent")
+uU(a,b){var s,r,q,p,o,n=$.rO()
+if(!n){A.aD("Skipping saveLanguage due to no cookie consent")
 return}try{s=new A.aV(Date.now(),0,!1).fG(A.ff(365,0,0,0).a).f9()
-m=self
-o=t.m
-r=A.p(o.a(o.a(m.window).location).pathname).length!==0?A.p(o.a(o.a(m.window).location).pathname):"/"
-o.a(m.document).cookie=u.b
-q="lang="+a+"; expires="+s.cA()+"; path="+A.m(r)
-o.a(m.document).cookie=q
-m=$.b6().gbG()
-o=A.eu(b,!1)
-o=t.b.a(A.aN.prototype.gA.call(o))
-o=t.gX.a(m).bJ(o.w)
-o.bv(o.$ti.c.a(a))}catch(n){p=A.y(n)
-A.aD("Error saving language to cookie: "+A.m(p))}},
+n=self
+p=t.m
+p.a(n.document).cookie=u.b
+p.a(n.document).cookie="lang=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/cross-players.github.io/"
+r="lang="+a+"; expires="+s.cA()+"; path=/cross-players.github.io/"
+p.a(n.document).cookie=r
+n=$.b6().gbG()
+p=A.eu(b,!1)
+p=t.b.a(A.aN.prototype.gA.call(p))
+p=t.gX.a(n).bJ(p.w)
+p.bv(p.$ti.c.a(a))}catch(o){q=A.y(o)
+A.aD("Error saving language to cookie: "+A.m(q))}},
 yZ(){var s,r,q,p,o,n,m,l,k=$.rO()
 if(!k){A.aD("No cookie consent or not client, skipping cookie read")
 return null}try{k=t.s
